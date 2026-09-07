@@ -1,0 +1,47 @@
+{
+	"hero": {
+		"title": "I BUILD SCALABLE WEB EXPERIENCES",
+		"subtitle": "Crafting performant, accessible, and visually stunning web applications.",
+		"stats": {
+			"exp": "5+ Years",
+			"projects": "50+ Projects",
+			"commits": "1.2K+ Commits"
+		}
+	},
+	"skills": {
+		"frontend": [
+			{ "name": "React", "short": "⚛️" },
+			{ "name": "Next.js", "short": "▲" },
+			{ "name": "TypeScript", "short": "TS" },
+			{ "name": "Tailwind CSS", "short": "🎨" },
+			{ "name": "Vue.js", "short": "V" },
+			{ "name": "Svelte", "short": "S" },
+			{ "name": "JavaScript", "short": "JS" },
+			{ "name": "HTML5", "short": "5" },
+			{ "name": "CSS3", "short": "3" },
+			{ "name": "Vite", "short": "⚡" }
+		],
+		"backend": [
+			{
+				"name": "Node.js",
+				"desc": "Express • APIs • REST",
+				"icon": "🟢"
+			},
+			{
+				"name": "Python",
+				"desc": "FastAPI • Scripts • Automation",
+				"icon": "🐍"
+			},
+			{
+				"name": "PostgreSQL",
+				"desc": "Queries • Migrations • ORM",
+				"icon": "🐘"
+			},
+			{
+				"name": "Docker",
+				"desc": "Containers • Compose • Deploy",
+				"icon": "🐳"
+			}
+		]
+	}
+}
