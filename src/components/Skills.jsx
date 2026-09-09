@@ -8,7 +8,7 @@ export default function Skills() {
 	return (
 		<section
 			id="skills"
-			className="bg-black py-20 px-6 max-w-7xl mx-auto">
+			className=" py-20 px-6 max-w-7xl mx-auto">
 			<div className="flex items-center gap-4 mb-10">
 				<div className="w-2 h-8 bg-yellow-400"></div>
 				<h2 className="text-4xl font-bold">

@@ -1,4 +1,36 @@
+import { useNavigate, useLocation } from "react-router-dom";
+
 export default function Footer() {
+	const navigate = useNavigate();
+	const location = useLocation();
+
+	const go = (id) => {
+		const scroll = (target) => {
+			const el =
+				document.getElementById(target) ||
+				document.getElementById(target + "s");
+			if (el)
+				el.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+				});
+			else if (target === "home")
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			else
+				window.scrollTo({
+					top: document.body.scrollHeight,
+					behavior: "smooth",
+				});
+		};
+
+		if (location.pathname !== "/") {
+			navigate("/");
+			setTimeout(() => scroll(id), 350);
+		} else {
+			scroll(id);
+		}
+	};
+
 	return (
 		<footer className="relative border-t border-yellow-500/10 bg-black overflow-hidden">
 			{/* BG - Golden Glow */}
@@ -11,7 +43,7 @@ export default function Footer() {
 				<div className="flex flex-col md:flex-row justify-between gap-10">
 					<div>
 						<h3 className="text-2xl font-black tracking-widest text-yellow-400">
-							DEV.P
+							code with ashu
 						</h3>
 						<p className="mt-3 text-sm text-gray-400 max-w-xs">
 							Building scalable, performant &
@@ -26,25 +58,49 @@ export default function Footer() {
 							</p>
 							<ul className="space-y-2 text-gray-300">
 								<li>
-									<a
-										href="#"
+									<button
+										onClick={() =>
+											go("home")
+										}
 										className="hover:text-yellow-400">
 										Home
-									</a>
+									</button>
 								</li>
 								<li>
-									<a
-										href="#skills"
-										className="hover:text-yellow-400">
-										Skills
-									</a>
-								</li>
-								<li>
-									<a
-										href="#"
+									<button
+										onClick={() =>
+											go("project")
+										}
 										className="hover:text-yellow-400">
 										Projects
-									</a>
+									</button>
+								</li>
+								<li>
+									<button
+										onClick={() =>
+											go("skills")
+										}
+										className="hover:text-yellow-400">
+										Skills
+									</button>
+								</li>
+								<li>
+									<button
+										onClick={() =>
+											go("about")
+										}
+										className="hover:text-yellow-400">
+										About
+									</button>
+								</li>
+								<li>
+									<button
+										onClick={() =>
+											go("contact")
+										}
+										className="hover:text-yellow-400">
+										Contact
+									</button>
 								</li>
 							</ul>
 						</div>
@@ -55,14 +111,18 @@ export default function Footer() {
 							<ul className="space-y-2 text-gray-300">
 								<li>
 									<a
-										href="#"
+										href="https://github.com"
+										target="_blank"
+										rel="noreferrer"
 										className="hover:text-yellow-400">
 										GitHub ↗
 									</a>
 								</li>
 								<li>
 									<a
-										href="#"
+										href="https://linkedin.com"
+										target="_blank"
+										rel="noreferrer"
 										className="hover:text-yellow-400">
 										LinkedIn ↗
 									</a>
@@ -79,8 +139,8 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="mt-12 pt-6 border-t border-white/5 flex justify-between text-[11px] text-gray-500">
-					<span>© 2025 DEV.P</span>
+				<div className="mt-12 pt-6 border-t border-white/5 flex justify-between text-[11px] text-gray-500 tracking-widest">
+					<span>© 2026 CODE WITH ASHU</span>
 					<span>BUILT WITH REACT • TAILWIND</span>
 				</div>
 			</div>

@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"name": "Pizza App",
+		"description": "Pizza app UI with login auth and add-to-cart functionality with admin panel.",
+		"githubLink": "https://github.com/Ashishsingh4857/Realtime-pizza-tracking-app",
+		"liveDemoLink": "https://pizza.run.place/",
+		"image": "./assets/project-1.png"
+	},
+
+	{
+		"id": 2,
+		"name": "React To-Do App",
+		"description": "a to-do app built with react, utilizing react context for state management and local storage for data persistence. users can add, edit, and delete tasks.",
+		"githubLink": "https://github.com/Ashishsingh4857/React-todo-app",
+		"liveDemoLink": "https://create-todo-with-react.netlify.app/",
+		"image": "./assets/project-3.png"
+	},
+	{
+		"id": 3,
+		"name": "Weather Application",
+		"description": "Weather application with real-time API weather data provided by OpenWeather.",
+		"githubLink": "https://github.com/Ashishsingh4857/weather-application",
+		"liveDemoLink": "https://splendorous-wisp-d37006.netlify.app/",
+		"image": "./assets/project-2.png"
+	},
+
+	{
+		"id": 4,
+		"name": "React Password Generator",
+		"description": "this react app generates random passwords with customizable length and character types.",
+		"githubLink": "https://github.com/Ashishsingh4857/React-tutorial-chapters/tree/password-generator",
+		"liveDemoLink": "https://inquisitive-jalebi-ced194.netlify.app/",
+		"image": "./assets/project-5.png"
+	},
+	{
+		"id": 5,
+		"name": "Gradient Generator ",
+		"description": "This website lets you create a colorful gradient background for your website, blog, or social media profile.",
+		"githubLink": "https://github.com/",
+		"liveDemoLink": "https://capable-cascaron-47b308.netlify.app/",
+		"image": "./assets/project-6.png"
+	}
+]
