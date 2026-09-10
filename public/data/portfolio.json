@@ -1,0 +1,162 @@
+{
+	"hero": {
+		"title": "I BUILD SCALABLE WEB EXPERIENCES",
+		"subtitle": "Crafting performant, accessible, and visually stunning web applications.",
+		"stats": {
+			"exp": "3+ Years",
+			"projects": "10+ Projects",
+			"commits": "1.2K+ Commits"
+		}
+	},
+	"skills": {
+		"frontend": [
+			{ "name": "React", "icon": "/icons/reactjs.svg" },
+			{ "name": "Next.js", "icon": "/icons/nextjs.svg" },
+			{ "name": "TypeScript", "icon": "/icons/typescript.svg" },
+			{ "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
+			{
+				"name": "JavaScript",
+				"icon": "/icons/javascript.svg"
+			},
+			{ "name": "HTML5", "icon": "/icons/html5.svg" },
+			{ "name": "CSS3", "icon": "/icons/css3.svg" },
+			{ "name": "Vite", "icon": "/icons/vite.svg" },
+			{
+				"name": "React Router",
+				"icon": "/icons/reactrouter.svg"
+			},
+			{
+				"name": "React Hook Form",
+				"icon": "/icons/reacthookform.svg"
+			},
+			{ "name": "Redux", "icon": "/icons/redux.svg" }
+		],
+		"backend": [
+			{
+				"name": "Node.js",
+				"desc": "Express • APIs • REST",
+				"icon": "/icons/nodejs.svg"
+			},
+			{
+				"name": "MongoDB",
+				"desc": "NoSQL • Atlas • Mongoose",
+				"icon": "/icons/mongodb.svg"
+			},
+			{
+				"name": "Firebase",
+				"desc": "Auth • Firestore • Hosting",
+				"icon": "/icons/firebase.svg"
+			},
+			{
+				"name": "Appwrite",
+				"desc": "BaaS • Auth • Database",
+				"icon": "/icons/appwrite.svg"
+			}
+		],
+		"devtools": [
+			{
+				"name": "Git & GitHub",
+				"desc": "Version Control",
+				"icon": "/icons/github-light.svg"
+			},
+			{
+				"name": "Postman",
+				"desc": "API Testing",
+				"icon": "/icons/postman.svg"
+			},
+			{
+				"name": "VS Code",
+				"desc": "Editor • Extensions",
+				"icon": "/icons/vscode.svg"
+			},
+			{
+				"name": "Cloudinary",
+				"desc": "Media Management",
+				"icon": "/icons/cloudinary.svg"
+			}
+		],
+		"editing": [
+			{ "name": "CapCut", "icon": "/icons/capcut.svg" },
+			{ "name": "Lightroom", "icon": "/icons/adobe-lightroom.svg" }
+		]
+	},
+	"projects": [
+		{
+			"id": "analytics-dashboard",
+			"title": "Analytics Dashboard",
+			"desc": "Real-time analytics dashboard with data viz",
+			"img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+			"tag": "Next.js • NEW",
+			"tech": ["Next.js", "Chart.js", "PostgreSQL"],
+			"longDesc": "A powerful real-time analytics dashboard built with Next.js...",
+			"features": [
+				"Real-time charts",
+				"Role based access",
+				"Export to CSV"
+			]
+		},
+		{
+			"id": "portfolio-website",
+			"title": "Portfolio Website",
+			"desc": "Responsive portfolio with blog & MDX content",
+			"img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
+			"tag": "MERN • PORTFOLIO",
+			"tech": ["React", "MERN", "Tailwind"],
+			"longDesc": "Modern portfolio website with glassmorphism UI...",
+			"features": ["MDX Blog", "Glass UI", "SEO Optimized"]
+		},
+		{
+			"id": "crypto-tracker",
+			"title": "Crypto Tracker",
+			"desc": "Crypto prices tracker with live data & alerts",
+			"img": "https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=800",
+			"tag": "Next.js • OPEN SOURCE",
+			"tech": ["Next.js", "API", "REST"],
+			"longDesc": "Live crypto price tracker...",
+			"features": ["Live WebSocket", "Price Alerts", "Watchlist"]
+		},
+		{
+			"id": "ecommerce-app",
+			"title": "E-Commerce App",
+			"desc": "Full-stack e-commerce with payment",
+			"img": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800",
+			"tag": "MERN • NEW",
+			"tech": ["React", "Node.js", "MongoDB"],
+			"longDesc": "Complete e-commerce platform...",
+			"features": ["Payment Gateway", "Admin Panel", "Cart System"]
+		}
+	],
+	"contact": {
+		"email": "hello@devportfolio.com",
+		"location": "San Francisco, CA • Remote Available",
+		"responseTime": "Typically responds within 24 hours",
+		"socials": {
+			"github": "https://github.com/tu",
+			"linkedin": "https://linkedin.com/in/tu",
+			"twitter": "https://x.com/tu"
+		}
+	},
+	"about": {
+		"name": "Alex Chen",
+		"avatar": "https://i.pravatar.cc/100?img=12",
+		"shortRole": "Full-Stack Developer • Based in San Francisco",
+		"fullRole": "Full-Stack Developer • Based in San Francisco • 5+ Years",
+		"shortBio": "I'm Alex Chen, a full-stack developer building performant web apps with a focus on clean design & user experience.",
+		"longBio": "I'm Alex Chen, a full-stack developer with 5+ years building scalable web applications and open-source contributor. I specialize in crafting intuitive UI and reliable backend systems, focusing on modern React, Node.js, and cloud architecture. I enjoy turning complex problems into simple, performant, and accessible solutions.",
+		"meta": ["📅 5+ Years", "📍 SF, CA", "💼 Available"],
+		"skills": [
+			"React",
+			"TypeScript",
+			"Node.js",
+			"Next.js",
+			"Tailwind CSS",
+			"PostgreSQL",
+			"AWS",
+			"Docker",
+			"Python",
+			"GraphQL"
+		],
+		"tooling": "REST/GraphQL • CI/CD • Agile • Testing (Jest, Playwright) • Figma",
+		"resumeUrl": "/resume.pdf"
+	}
+}

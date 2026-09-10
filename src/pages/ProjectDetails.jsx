@@ -1,10 +1,21 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { projectsData } from "../data/projects";
+import { usePortfolio } from "../hooks/usePortfolio";
 
 export default function ProjectDetails() {
 	const { id } = useParams();
 	const navigate = useNavigate();
-	const project = projectsData.find((p) => p.id === id);
+
+	// hook se data
+	const { data, loading } = usePortfolio();
+
+	if (loading || !data) {
+		return (
+			<div className="text-white p-20 text-center">Loading...</div>
+		);
+	}
+
+	// id string vs number ka issue fix
+	const project = data.projects.find((p) => String(p.id) === String(id));
 
 	if (!project)
 		return (
@@ -22,15 +33,18 @@ export default function ProjectDetails() {
 			</button>
 			<img
 				src={project.img}
+				alt={project.title}
+				width="800"
+				height="360"
 				className="w-full h-[360px] object-cover rounded-2xl border border-white/10"
 			/>
 			<h1 className="text-[36px] font-black text-white mt-8">
 				{project.title}
 			</h1>
 			<p className="text-white/60 mt-3 leading-relaxed">
-				{project.longDesc}
+				{project.longDesc || project.desc}
 			</p>
-			<div className="mt-6 flex gap-2">
+			<div className="mt-6 flex gap-2 flex-wrap">
 				{project.tech.map((t) => (
 					<span
 						key={t}

@@ -1,21 +1,40 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { projectsData } from "../data/projects";
+import { usePortfolio } from "../hooks/usePortfolio";
+import ProjectCardSkeleton from "../Skeletons/ProjectCardSkeleton";
 
 export default function Project() {
 	const [index, setIndex] = useState(0);
 	const navigate = useNavigate();
+	const { data, loading } = usePortfolio();
 
-	const next = () => setIndex((p) => (p + 1) % projectsData.length);
-	const prev = () =>
-		setIndex(
-			(p) => (p - 1 + projectsData.length) % projectsData.length,
+	if (loading || !data) {
+		return (
+			<div
+				id="project"
+				className="py-28">
+				<div className="max-w-7xl mx-auto px-6">
+					<div className="h-10 w-64 bg-white/10 rounded-full mx-auto animate-pulse mb-14"></div>
+					<div className="grid md:grid-cols-3 gap-6 mx-8">
+						<ProjectCardSkeleton />
+						<ProjectCardSkeleton />
+						<ProjectCardSkeleton />
+					</div>
+				</div>
+			</div>
 		);
+	}
+
+	const projects = data.projects;
+
+	const next = () => setIndex((p) => (p + 1) % projects.length);
+	const prev = () =>
+		setIndex((p) => (p - 1 + projects.length) % projects.length);
 
 	const getCards = () => {
 		let c = [];
 		for (let i = 0; i < 3; i++)
-			c.push(projectsData[(index + i) % projectsData.length]);
+			c.push(projects[(index + i) % projects.length]);
 		return c;
 	};
 
@@ -25,13 +44,12 @@ export default function Project() {
 			className="relative py-28">
 			<div className="max-w-7xl mx-auto px-6">
 				<h2 className="text-center text-[40px] font-black text-white">
-					My{" "}
+					My
 					<span className="bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
 						Projects
 					</span>
 				</h2>
 				<div className="relative mt-14 flex items-center">
-					{/* LEFT - PREV */}
 					<button
 						onClick={prev}
 						className="absolute -left-2 md:-left-6 z-20 w-11 h-11 rounded-full bg-white/[0.08] border border-white/10 text-white">
@@ -49,6 +67,10 @@ export default function Project() {
 								<div className="h-[180px] rounded-[14px] overflow-hidden bg-black">
 									<img
 										src={p.img}
+										alt={p.title}
+										loading="lazy"
+										width="400"
+										height="180"
 										className="w-full h-full object-cover"
 									/>
 								</div>
@@ -69,7 +91,6 @@ export default function Project() {
 										</span>
 									))}
 								</div>
-								{/* YEHI LINE FIX HAI - p.id ab exist karega */}
 								<button
 									onClick={() =>
 										navigate(
@@ -83,7 +104,6 @@ export default function Project() {
 						))}
 					</div>
 
-					{/* RIGHT - NEXT */}
 					<button
 						onClick={next}
 						className="absolute -right-2 md:-right-6 z-20 w-11 h-11 rounded-full bg-white/[0.08] border border-white/10 text-white">

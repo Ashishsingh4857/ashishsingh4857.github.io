@@ -1,15 +1,17 @@
 import { usePortfolio } from "../hooks/usePortfolio";
-
+import HeroSkeleton from "../Skeletons/HeroSkeleton";
 export default function Hero() {
-	const { data } = usePortfolio();
-	if (!data) return null;
+	const { data, loading } = usePortfolio();
+
+	if (loading || !data) return <HeroSkeleton />;
 
 	return (
 		<section className="relative min-h-screen flex items-center overflow-hidden">
 			{/* Background Image */}
 			<img
 				src="/images/hero-bg.webp"
-				alt="hero bg"
+				alt=""
+				aria-hidden="true"
 				className="absolute inset-0 w-full h-full object-cover opacity-70"
 			/>
 			{/* Gradient Overlay */}

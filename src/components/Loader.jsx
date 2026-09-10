@@ -11,7 +11,7 @@ export default function Loader({ onFinish }) {
 					setTimeout(() => onFinish(), 600);
 					return 100;
 				}
-				return p + 1.2;
+				return p + 2.5;
 			});
 		}, 30);
 		return () => clearInterval(interval);

@@ -1,8 +1,17 @@
 import { useState } from "react";
+import { usePortfolio } from "../hooks/usePortfolio";
 
 export default function Contact() {
 	const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 	const [status, setStatus] = useState("idle");
+
+	const { data } = usePortfolio();
+	// loading ka wait mat kar yahan
+	const contact = data?.contact || {
+		email: "hello@devportfolio.com",
+		location: "San Francisco, CA • Remote Available",
+		// fallback
+	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
