@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
+import { motion } from "framer-motion";
 
 export default function Contact() {
 	const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 	const [status, setStatus] = useState("idle");
 
 	const { data } = usePortfolio();
-	// loading ka wait mat kar yahan
 	const contact = data?.contact || {
 		email: "hello@devportfolio.com",
 		location: "San Francisco, CA • Remote Available",
-		// fallback
 	};
 
 	const handleSubmit = async (e) => {
@@ -20,11 +19,11 @@ export default function Contact() {
 			return;
 		}
 		setStatus("loading");
-		const data = new FormData(e.target);
+		const formData = new FormData(e.target);
 		try {
 			const res = await fetch(FORMSPREE_URL, {
 				method: "POST",
-				body: data,
+				body: formData,
 				headers: { Accept: "application/json" },
 			});
 			if (res.ok) {
@@ -40,11 +39,20 @@ export default function Contact() {
 	return (
 		<div
 			id="contact"
-			className="relative bg-black py-20">
+			className="relative bg-black py-20 overflow-hidden">
 			<div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
-				{/* LEFT SIDE */}
-				<div>
-					<h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
+				{/* LEFT SIDE - LEFT SE AYEGA */}
+				<motion.div
+					initial={{ x: -100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{ duration: 0.8, ease: "easeOut" }}>
+					<motion.h1
+						initial={{ x: -80, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7, delay: 0.1 }}
+						className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
 						<span className="bg-gradient-to-b from-yellow-100 to-yellow-400 bg-clip-text text-transparent">
 							Let's
 						</span>
@@ -52,27 +60,36 @@ export default function Contact() {
 						<span className="bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
 							Talk
 						</span>
-					</h1>
-					<p className="mt-6 text-gray-300 max-w-md text-[15px] leading-relaxed">
+					</motion.h1>
+
+					<motion.p
+						initial={{ x: -60, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7, delay: 0.3 }}
+						className="mt-6 text-gray-300 max-w-md text-[15px] leading-relaxed">
 						Have a project in mind? I'm always open to
 						discussing new opportunities,
 						collaborations, or just a friendly chat.
-					</p>
-					<div className="mt-10 space-y-5 text-sm text-gray-300">
+					</motion.p>
+
+					<motion.div
+						initial={{ x: -60, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7, delay: 0.4 }}
+						className="mt-10 space-y-5 text-sm text-gray-300">
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-yellow-400/30 bg-white/5 backdrop-blur flex items-center justify-center">
 								✉
 							</div>
-							<span>hello@devportfolio.com</span>
+							<span>{contact.email}</span>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-yellow-400/30 bg-white/5 backdrop-blur flex items-center justify-center">
 								◎
 							</div>
-							<span>
-								San Francisco, CA • Remote
-								Available
-							</span>
+							<span>{contact.location}</span>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-yellow-400/30 bg-white/5 backdrop-blur flex items-center justify-center">
@@ -83,8 +100,14 @@ export default function Contact() {
 								hours
 							</span>
 						</div>
-					</div>
-					<div className="mt-10 flex gap-4">
+					</motion.div>
+
+					<motion.div
+						initial={{ x: -60, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7, delay: 0.5 }}
+						className="mt-10 flex gap-4">
 						<a
 							href="#"
 							className="w-12 h-12 rounded-full bg-white/[0.05] border border-yellow-500/20 backdrop-blur flex items-center justify-center text-yellow-400 hover:bg-yellow-400/10 transition">
@@ -100,11 +123,20 @@ export default function Contact() {
 							className="w-12 h-12 rounded-full bg-white/[0.05] border border-yellow-500/20 backdrop-blur flex items-center justify-center text-yellow-400 hover:bg-yellow-400/10 transition">
 							𝕏
 						</a>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 
-				{/* RIGHT SIDE - FORM */}
-				<div className="relative rounded-[24px] border border-yellow-500/20 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl p-7 md:p-8 shadow-[0_0_80px_rgba(234,179,8,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]">
+				{/* RIGHT SIDE - RIGHT SE AYEGA */}
+				<motion.div
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{
+						duration: 0.8,
+						delay: 0.2,
+						ease: "easeOut",
+					}}
+					className="relative rounded-[24px] border border-yellow-500/20 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl p-7 md:p-8 shadow-[0_0_80px_rgba(234,179,8,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]">
 					<div className="absolute -top-16 -right-16 w-60 h-60 bg-yellow-500/20 blur-[70px] rounded-full pointer-events-none"></div>
 					<h2 className="text-[28px] font-bold text-white">
 						Send a Message
@@ -185,7 +217,7 @@ export default function Contact() {
 							</p>
 						)}
 					</form>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);

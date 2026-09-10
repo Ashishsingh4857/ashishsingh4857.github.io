@@ -14,3 +14,23 @@ body {
 	backdrop-filter: blur(20px);
 	border: 1px solid rgba(234, 179, 8, 0.2);
 }
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Heavy blur ko mobile pe auto disable */
+@media (max-width: 768px) {
+	.backdrop-blur-\[20px\],
+	.backdrop-blur-xl,
+	.backdrop-blur {
+		backdrop-filter: none !important;
+		background: #111214 !important;
+	}
+	.blur-\[60px\],
+	.blur-\[80px\],
+	.blur-\[70px\],
+	.blur-\[100px\] {
+		display: none !important;
+	}
+}
