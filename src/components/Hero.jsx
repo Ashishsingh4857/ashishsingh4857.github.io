@@ -28,7 +28,7 @@ export default function Hero() {
 		<section className="relative min-h-screen flex items-center overflow-hidden">
 			{/* Background Image */}
 			<img
-				src="/images/hero-bg.webp"
+				src={data?.hero.img}
 				alt=""
 				aria-hidden="true"
 				className="absolute inset-0 w-full h-full object-cover opacity-70"

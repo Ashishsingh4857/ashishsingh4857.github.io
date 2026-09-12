@@ -2,10 +2,11 @@
 	"hero": {
 		"title": "I BUILD SCALABLE WEB EXPERIENCES",
 		"subtitle": "Crafting performant, accessible, and visually stunning web applications.",
+		"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789188513/hero-bg_zb2ftz.webp",
 		"stats": {
 			"exp": "3+ Years",
 			"projects": "10+ Projects",
-			"commits": "1.2K+ Commits"
+			"commits": "1K+ Commits"
 		}
 	},
 	"skills": {
@@ -14,17 +15,11 @@
 			{ "name": "Next.js", "icon": "/icons/nextjs.svg" },
 			{ "name": "TypeScript", "icon": "/icons/typescript.svg" },
 			{ "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
-			{
-				"name": "JavaScript",
-				"icon": "/icons/javascript.svg"
-			},
+			{ "name": "JavaScript", "icon": "/icons/javascript.svg" },
 			{ "name": "HTML5", "icon": "/icons/html5.svg" },
 			{ "name": "CSS3", "icon": "/icons/css3.svg" },
 			{ "name": "Vite", "icon": "/icons/vite.svg" },
-			{
-				"name": "React Router",
-				"icon": "/icons/reactrouter.svg"
-			},
+			{ "name": "React Router", "icon": "/icons/reactrouter.svg" },
 			{
 				"name": "React Hook Form",
 				"icon": "/icons/reacthookform.svg"
@@ -82,81 +77,180 @@
 	},
 	"projects": [
 		{
-			"id": "analytics-dashboard",
-			"title": "Analytics Dashboard",
-			"desc": "Real-time analytics dashboard with data viz",
-			"img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
-			"tag": "Next.js • NEW",
-			"tech": ["Next.js", "Chart.js", "PostgreSQL"],
-			"longDesc": "A powerful real-time analytics dashboard built with Next.js...",
+			"id": 1,
+			"title": "Streamify",
+			"desc": "A full-stack YouTube + Twitter hybrid where users can stream videos, post tweets, like, comment & subscribe. Features secure JWT auth and a dedicated admin panel.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176616/Screenshot_2025-11-20_at_2.27.46_AM_x9arim.png",
+			"img2": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176585/Screenshot_2025-11-20_at_5.03.08_PM_q3pgkp.png",
+			"tag": "MERN • FEATURED",
+			"tech": [
+				"React",
+				"Redux Toolkit",
+				"Node.js",
+				"Express",
+				"MongoDB",
+				"Cloudinary",
+				"Multer"
+			],
+			"longDesc": "Streamify is a scalable, full-stack social video streaming platform inspired by YouTube and Twitter. The idea was to build not just a video player, but a complete social ecosystem where users can watch videos and interact socially via tweets.\n\nThe platform covers end-to-end functionality - from secure user authentication to high-performance video delivery.\n\nKey Features:\n- User Authentication & Profile: JWT-based login/signup, avatar/cover upload.\n- Video Ecosystem: Video upload & streaming with Cloudinary & Multer, history, likes, comments.\n- Social Layer: Twitter-like tweet creation and real-time like system.\n- Subscription System: Full YouTube-like channel subscription model.\n- Admin Panel: Dashboard for creators to upload, edit, delete and manage videos.",
 			"features": [
-				"Real-time charts",
-				"Role based access",
-				"Export to CSV"
-			]
+				"Video Streaming",
+				"Tweet System",
+				"JWT Authentication",
+				"Subscription Model",
+				"Admin Panel",
+				"Cloudinary Upload"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857/youtube-twitter-backend",
+			"liveDemoLink": "https://github.com/Ashishsingh4857/youtube-twitter-frontend"
 		},
 		{
-			"id": "portfolio-website",
+			"id": 2,
+			"title": "Realtime Pizza Tracking App",
+			"desc": "A full-stack pizza ordering platform with real-time order status tracking using WebSockets, cart system and admin panel.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176126/PizzaApp_buxanc.png",
+			"tag": "MERN • REALTIME",
+			"tech": [
+				"Next.js",
+				"Node.js",
+				"MongoDB",
+				"Socket.io",
+				"Tailwind CSS"
+			],
+			"longDesc": "A full-stack pizza delivery application with real-time order tracking. Users can order pizzas, manage cart, and track order status live from placed to delivered using Socket.io. Includes a powerful admin panel to manage orders and products.",
+			"features": [
+				"Real-time Status Tracking",
+				"Add-to-Cart",
+				"Admin Order Management",
+				"Authentication"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857/Realtime-pizza-tracking-app",
+			"liveDemoLink": "https://pizza.run.place/"
+		},
+		{
+			"id": 3,
 			"title": "Portfolio Website",
-			"desc": "Responsive portfolio with blog & MDX content",
+			"desc": "Modern, responsive personal portfolio with glassmorphism UI, MDX blog support and SEO optimization.",
 			"img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
-			"tag": "MERN • PORTFOLIO",
-			"tech": ["React", "MERN", "Tailwind"],
-			"longDesc": "Modern portfolio website with glassmorphism UI...",
-			"features": ["MDX Blog", "Glass UI", "SEO Optimized"]
+			"tag": "Next.js • PORTFOLIO",
+			"tech": ["Next.js", "React", "Tailwind CSS", "MDX"],
+			"longDesc": "A modern and performant portfolio website built with Next.js and Tailwind CSS. Features glassmorphism UI, fully responsive design, MDX-powered blog, and optimized for SEO and performance.",
+			"features": [
+				"Glassmorphism UI",
+				"MDX Blog",
+				"SEO Optimized",
+				"Fully Responsive"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857",
+			"liveDemoLink": "#"
 		},
 		{
-			"id": "crypto-tracker",
-			"title": "Crypto Tracker",
-			"desc": "Crypto prices tracker with live data & alerts",
-			"img": "https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=800",
-			"tag": "Next.js • OPEN SOURCE",
-			"tech": ["Next.js", "API", "REST"],
-			"longDesc": "Live crypto price tracker...",
-			"features": ["Live WebSocket", "Price Alerts", "Watchlist"]
+			"id": 4,
+			"title": "To-Do App",
+			"desc": "A minimal and fast to-do app with add, edit, delete and complete functionality using Context API and Local Storage.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176138/To-do-App_vnzi8s.png",
+			"tag": "React • PRODUCTIVITY",
+			"tech": ["React", "Vite", "Context API", "Tailwind CSS"],
+			"longDesc": "A clean and fast to-do application built with Vite and React. Uses React Context API for efficient state management and Local Storage for data persistence. Users can add, edit, delete and mark tasks as completed.",
+			"features": [
+				"Add/Edit/Delete Tasks",
+				"Context API State Management",
+				"Local Storage Persistence"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857/React-todo-app",
+			"liveDemoLink": "https://create-todo-with-react.netlify.app/"
 		},
 		{
-			"id": "ecommerce-app",
-			"title": "E-Commerce App",
-			"desc": "Full-stack e-commerce with payment",
-			"img": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800",
-			"tag": "MERN • NEW",
-			"tech": ["React", "Node.js", "MongoDB"],
-			"longDesc": "Complete e-commerce platform...",
-			"features": ["Payment Gateway", "Admin Panel", "Cart System"]
+			"id": 5,
+			"title": "Weather App",
+			"desc": "A dynamic weather app that shows real-time weather data for any city using OpenWeather API.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176112/weatherapp_igl06f.png",
+			"tag": "JavaScript • API",
+			"tech": [
+				"JavaScript",
+				"Vite",
+				"OpenWeather API",
+				"HTML5",
+				"CSS3"
+			],
+			"longDesc": "A responsive weather application built with Vite and JavaScript. Fetches real-time weather data from OpenWeather API with features like city search, temperature, humidity, wind speed and dynamic backgrounds based on weather.",
+			"features": [
+				"City Search",
+				"Real-time API Data",
+				"Dynamic UI",
+				"Responsive Design"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857",
+			"liveDemoLink": "#"
+		},
+		{
+			"id": 6,
+			"title": "Password Generator",
+			"desc": "A secure random password generator with customizable length, numbers, and special characters.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176163/PasswordGenerator_itfjud.png",
+			"tag": "React • TOOL",
+			"tech": ["React", "JavaScript", "Tailwind CSS", "Vite"],
+			"longDesc": "A handy tool to generate strong and secure random passwords. Users can customize password length, include numbers and special characters, and copy to clipboard with one click. Built with React and Tailwind.",
+			"features": [
+				"Custom Length",
+				"Include Numbers & Symbols",
+				"One-Click Copy",
+				"Strength Indicator"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857",
+			"liveDemoLink": "#"
+		},
+		{
+			"id": 7,
+			"title": "Gradient Generator",
+			"desc": "A tool for developers and designers to create, preview and copy beautiful CSS gradients instantly.",
+			"img": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176168/Gradient-generator_isg2rn.png",
+			"tag": "React • TOOL",
+			"tech": ["React", "JavaScript", "CSS3", "Vite"],
+			"longDesc": "A simple and useful gradient generator for developers. Create custom linear gradients, preview in real-time, and copy the CSS code instantly. Helps in speeding up UI development.",
+			"features": [
+				"Live Preview",
+				"Copy CSS Code",
+				"Multiple Color Stops",
+				"Random Generator"
+			],
+			"githubLink": "https://github.com/Ashishsingh4857",
+			"liveDemoLink": "#"
 		}
 	],
 	"contact": {
 		"email": "hello@devportfolio.com",
-		"location": "San Francisco, CA • Remote Available",
+		"location": "Jabalpur, India • Remote Available",
 		"responseTime": "Typically responds within 24 hours",
 		"socials": {
-			"github": "https://github.com/tu",
-			"linkedin": "https://linkedin.com/in/tu",
-			"twitter": "https://x.com/tu"
+			"github": "https://github.com/Ashishsingh4857",
+			"linkedin": "https://linkedin.com/in/ashishsingh4857",
+			"twitter": "https://x.com/ashishsingh4857"
 		}
 	},
 	"about": {
-		"name": "Alex Chen",
-		"avatar": "https://i.pravatar.cc/100?img=12",
-		"shortRole": "Full-Stack Developer • Based in San Francisco",
-		"fullRole": "Full-Stack Developer • Based in San Francisco • 5+ Years",
-		"shortBio": "I'm Alex Chen, a full-stack developer building performant web apps with a focus on clean design & user experience.",
-		"longBio": "I'm Alex Chen, a full-stack developer with 5+ years building scalable web applications and open-source contributor. I specialize in crafting intuitive UI and reliable backend systems, focusing on modern React, Node.js, and cloud architecture. I enjoy turning complex problems into simple, performant, and accessible solutions.",
-		"meta": ["📅 5+ Years", "📍 SF, CA", "💼 Available"],
+		"name": "Ashish Singh",
+		"avatar": "https://res.cloudinary.com/ashishsingh4857/image/upload/v1789176096/ProfilePic_l5v3ib.webp",
+		"shortRole": "Full-Stack Developer • Based in Jabalpur, India",
+		"fullRole": "Full-Stack Developer • Based in Jabalpur, India • 3+ Years Experience",
+		"shortBio": "I'm Ashish Singh, a full-stack developer building performant web apps with a focus on clean design & user experience.",
+		"longBio": "I'm Ashish Singh, a Full-Stack Developer based in Jabalpur, India, with 3+ years of experience in designing and developing scalable, high-performance web applications using the MERN stack. I specialize in building intuitive frontends with React and Next.js, secure backends with Node.js, Express, and MongoDB.\n\nMy approach is rooted in complete ownership and product thinking. I am committed to writing clean, maintainable, and well-documented code, ensuring transparent communication, and delivering high-quality solutions on time. My focus is always on performance, scalability, and crafting seamless user experiences by transforming complex requirements into elegant and efficient solutions.",
+		"meta": [
+			"📅 3+ Years Exp",
+			"📍 Jabalpur, India",
+			"💼 Available for Work"
+		],
 		"skills": [
 			"React",
-			"TypeScript",
-			"Node.js",
 			"Next.js",
+			"Node.js",
+			"TypeScript",
+			"MongoDB",
 			"Tailwind CSS",
-			"PostgreSQL",
-			"AWS",
-			"Docker",
-			"Python",
-			"GraphQL"
+			"Redux",
+			"Cloudinary"
 		],
-		"tooling": "REST/GraphQL • CI/CD • Agile • Testing (Jest, Playwright) • Figma",
+		"tooling": "REST API • CI/CD • Postman • Git & GitHub • Figma • Responsive Design",
 		"resumeUrl": "/resume.pdf"
 	}
 }
