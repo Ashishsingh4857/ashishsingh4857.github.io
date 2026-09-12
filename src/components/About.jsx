@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 import AboutSkeleton from "../Skeletons/AboutSkeleton";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,7 +22,7 @@ export default function About() {
 				viewport={{ once: true, amount: 0.2 }}
 				transition={{ duration: 0.5, ease: "easeOut" }}
 				style={{ transform: "translateZ(0)" }}
-				className="w-full max-w-[520px] relative rounded-[28px] border border-yellow-500/20 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-[20px] p-8 shadow-[0_0_60px_rgba(234,179,8,0.15),inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden isolate transform-gpu">
+				className="w-full max-w-[520px] relative rounded-[28px] border border-yellow-500/20 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-[16px] p-8 shadow-[0_0_60px_rgba(234,179,8,0.15),inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden isolate transform-gpu">
 				<div className="absolute -top-20 -left-20 w-60 h-60 bg-yellow-500/20 blur-[40px] rounded-full pointer-events-none"></div>
 				<div className="absolute -bottom-20 -right-20 w-80 h-80 bg-yellow-600/20 blur-[40px] rounded-full pointer-events-none"></div>
 

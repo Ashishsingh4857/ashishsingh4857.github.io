@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 import ProjectCardSkeleton from "../Skeletons/ProjectCardSkeleton";
 
 export default function Project() {

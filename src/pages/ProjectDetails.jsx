@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 
 export default function ProjectDetails() {
 	const { id } = useParams();

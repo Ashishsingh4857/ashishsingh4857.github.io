@@ -1,4 +1,4 @@
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 import SkillsSkeleton from "../Skeletons/SkillsSkeleton";
 export default function Skills() {
 	const { data, loading } = usePortfolio();

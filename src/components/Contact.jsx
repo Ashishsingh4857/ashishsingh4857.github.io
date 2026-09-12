@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 import { motion } from "framer-motion";
 
 export default function Contact() {

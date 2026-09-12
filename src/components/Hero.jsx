@@ -1,4 +1,4 @@
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../Context/PortfolioContext";
 import HeroSkeleton from "../Skeletons/HeroSkeleton";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
