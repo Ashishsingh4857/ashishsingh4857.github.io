@@ -7,7 +7,7 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
 	<PortfolioProvider>
-		<BrowserRouter>
+		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<App />
 		</BrowserRouter>
 	</PortfolioProvider>,

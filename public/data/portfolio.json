@@ -11,68 +11,68 @@
 	},
 	"skills": {
 		"frontend": [
-			{ "name": "React", "icon": "/icons/reactjs.svg" },
-			{ "name": "Next.js", "icon": "/icons/nextjs.svg" },
-			{ "name": "TypeScript", "icon": "/icons/typescript.svg" },
-			{ "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
-			{ "name": "JavaScript", "icon": "/icons/javascript.svg" },
-			{ "name": "HTML5", "icon": "/icons/html5.svg" },
-			{ "name": "CSS3", "icon": "/icons/css3.svg" },
-			{ "name": "Vite", "icon": "/icons/vite.svg" },
-			{ "name": "React Router", "icon": "/icons/reactrouter.svg" },
+			{ "name": "React", "icon": "icons/reactjs.svg" },
+			{ "name": "Next.js", "icon": "icons/nextjs.svg" },
+			{ "name": "TypeScript", "icon": "icons/typescript.svg" },
+			{ "name": "Tailwind CSS", "icon": "icons/tailwind.svg" },
+			{ "name": "JavaScript", "icon": "icons/javascript.svg" },
+			{ "name": "HTML5", "icon": "icons/html5.svg" },
+			{ "name": "CSS3", "icon": "icons/css3.svg" },
+			{ "name": "Vite", "icon": "icons/vite.svg" },
+			{ "name": "React Router", "icon": "icons/reactrouter.svg" },
 			{
 				"name": "React Hook Form",
-				"icon": "/icons/reacthookform.svg"
+				"icon": "icons/reacthookform.svg"
 			},
-			{ "name": "Redux", "icon": "/icons/redux.svg" }
+			{ "name": "Redux", "icon": "icons/redux.svg" }
 		],
 		"backend": [
 			{
 				"name": "Node.js",
 				"desc": "Express • APIs • REST",
-				"icon": "/icons/nodejs.svg"
+				"icon": "icons/nodejs.svg"
 			},
 			{
 				"name": "MongoDB",
 				"desc": "NoSQL • Atlas • Mongoose",
-				"icon": "/icons/mongodb.svg"
+				"icon": "icons/mongodb.svg"
 			},
 			{
 				"name": "Firebase",
 				"desc": "Auth • Firestore • Hosting",
-				"icon": "/icons/firebase.svg"
+				"icon": "icons/firebase.svg"
 			},
 			{
 				"name": "Appwrite",
 				"desc": "BaaS • Auth • Database",
-				"icon": "/icons/appwrite.svg"
+				"icon": "icons/appwrite.svg"
 			}
 		],
 		"devtools": [
 			{
 				"name": "Git & GitHub",
 				"desc": "Version Control",
-				"icon": "/icons/github-light.svg"
+				"icon": "icons/github-light.svg"
 			},
 			{
 				"name": "Postman",
 				"desc": "API Testing",
-				"icon": "/icons/postman.svg"
+				"icon": "icons/postman.svg"
 			},
 			{
 				"name": "VS Code",
 				"desc": "Editor • Extensions",
-				"icon": "/icons/vscode.svg"
+				"icon": "icons/vscode.svg"
 			},
 			{
 				"name": "Cloudinary",
 				"desc": "Media Management",
-				"icon": "/icons/cloudinary.svg"
+				"icon": "icons/cloudinary.svg"
 			}
 		],
 		"editing": [
-			{ "name": "CapCut", "icon": "/icons/capcut.svg" },
-			{ "name": "Lightroom", "icon": "/icons/adobe-lightroom.svg" }
+			{ "name": "CapCut", "icon": "icons/capcut.svg" },
+			{ "name": "Lightroom", "icon": "icons/adobe-lightroom.svg" }
 		]
 	},
 	"projects": [

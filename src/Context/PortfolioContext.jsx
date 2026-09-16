@@ -8,7 +8,7 @@ export const PortfolioProvider = ({ children }) => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch("/data/portfolio.json")
+		fetch(`${import.meta.env.BASE_URL}data/portfolio.json`)
 			.then((res) => {
 				if (!res.ok) throw new Error("JSON not found");
 				return res.json();
