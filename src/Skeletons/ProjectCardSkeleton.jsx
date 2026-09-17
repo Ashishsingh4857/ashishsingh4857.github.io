@@ -1,8 +1,8 @@
-const shimmer = "animate-pulse bg-white/[0.06]";
+const shimmer = "animate-pulse bg-black/[0.08] dark:bg-white/[0.06]";
 
 function CardSkeleton() {
 	return (
-		<div className="rounded-[20px] border border-white/10 bg-white/[0.03] p-3 pb-5">
+		<div className="rounded-[20px] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-3 pb-5 transition-colors">
 			<div className={`h-[180px] rounded-[14px] ${shimmer}`}></div>
 			<div className={`mt-5 h-6 w-3/4 rounded ${shimmer}`}></div>
 			<div className={`mt-2 h-4 w-full rounded ${shimmer}`}></div>
@@ -22,7 +22,7 @@ export default function ProjectsSkeleton() {
 	return (
 		<div
 			id="project"
-			className="relative py-28">
+			className="relative py-28 bg-[#F5F5F7] dark:bg-black transition-colors duration-300">
 			<div className="max-w-7xl mx-auto px-6">
 				<div
 					className={`mx-auto h-10 w-48 rounded ${shimmer}`}></div>
