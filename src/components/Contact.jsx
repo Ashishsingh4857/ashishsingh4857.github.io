@@ -1,15 +1,28 @@
 import { useState } from "react";
 import { usePortfolio } from "../Context/PortfolioContext";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 
 export default function Contact() {
 	const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 	const [status, setStatus] = useState("idle");
 
 	const { data } = usePortfolio();
+	//fallback
 	const contact = data?.contact || {
-		email: "hello@devportfolio.com",
-		location: "San Francisco, CA • Remote Available",
+		email: "ashishsingh4857@gmail.com",
+		location: "Jabalpur, In • Remote Available",
+		socials: {
+			github: "#",
+			linkedin: "#",
+			instagram: "#",
+		},
 	};
 
 	const handleSubmit = async (e) => {
@@ -81,19 +94,19 @@ export default function Contact() {
 						className="mt-10 space-y-5 text-sm text-black/70 dark:text-gray-300">
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-black/10 dark:border-yellow-400/30 bg-white/70 dark:bg-white/5 backdrop-blur flex items-center justify-center">
-								✉
+								<MdEmail />
 							</div>
 							<span>{contact.email}</span>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-black/10 dark:border-yellow-400/30 bg-white/70 dark:bg-white/5 backdrop-blur flex items-center justify-center">
-								◎
+								<FaLocationDot />
 							</div>
 							<span>{contact.location}</span>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-8 h-8 rounded-full border border-black/10 dark:border-yellow-400/30 bg-white/70 dark:bg-white/5 backdrop-blur flex items-center justify-center">
-								◷
+								<FaClock />
 							</div>
 							<span>
 								Typically responds within 24
@@ -108,12 +121,26 @@ export default function Contact() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.7, delay: 0.5 }}
 						className="mt-10 flex gap-4">
-						{["⬡", "in", "𝕏"].map((icon) => (
+						{[
+							{
+								Icon: FaGithub,
+								href: contact.socials.github,
+							},
+							{
+								Icon: IoLogoLinkedin,
+								href: contact.socials.linkedin,
+							},
+							{
+								Icon: FaInstagram,
+								href: contact.socials.instagram,
+							},
+						].map(({ Icon, href }) => (
 							<a
-								key={icon}
-								href="#"
-								className="w-12 h-12 rounded-full bg-white/70 dark:bg-white/[0.05] border border-black/10 dark:border-yellow-500/20 backdrop-blur flex items-center justify-center text-yellow-700 dark:text-yellow-400 hover:bg-yellow-500/10 transition font-bold">
-								{icon}
+								key={href + Icon.name}
+								href={href}
+								target="_blank"
+								className="w-12 h-12 rounded-full bg-white/70 dark:bg-white/[0.05] border border-black/10 dark:border-yellow-500/20 backdrop-blur flex items-center justify-center text-yellow-700 dark:text-yellow-400 hover:bg-yellow-500/10 transition text-xl">
+								<Icon />
 							</a>
 						))}
 					</motion.div>
@@ -196,7 +223,9 @@ export default function Contact() {
 								: status === "success"
 									? "Message Sent ✓"
 									: "Send Message"}{" "}
-							<span>✈️</span>
+							<span>
+								<FaLocationArrow />
+							</span>
 						</button>
 						{status === "success" && (
 							<p className="text-green-600 dark:text-green-400 text-xs text-center">
