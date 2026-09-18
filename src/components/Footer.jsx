@@ -9,6 +9,11 @@ export default function Footer() {
 	//fallback
 	const contact = data?.contact || {
 		email: "ashishsingh4857@gmail.com",
+		socials: {
+			github: "#",
+			linkedin: "#",
+			instagram: "#",
+		},
 	};
 
 	const go = (id) => {
