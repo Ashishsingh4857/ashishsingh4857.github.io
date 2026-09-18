@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function Footer() {
 	const navigate = useNavigate();
@@ -42,9 +43,8 @@ export default function Footer() {
 			<div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
 				<div className="flex flex-col md:flex-row justify-between gap-10">
 					<div>
-						<h3 className="text-2xl font-black tracking-widest text-yellow-600 dark:text-yellow-400">
-							code with ashu
-						</h3>
+						{/* LEFT - Logo */}
+						<Logo size="sm" />
 						<p className="mt-3 text-sm text-black/60 dark:text-gray-400 max-w-xs">
 							Building scalable, performant &
 							beautiful web experiences.
