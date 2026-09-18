@@ -1,9 +1,15 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import Logo from "./Logo";
+import { usePortfolio } from "../Context/PortfolioContext";
 
 export default function Footer() {
 	const navigate = useNavigate();
 	const location = useLocation();
+	const { data } = usePortfolio();
+	//fallback
+	const contact = data?.contact || {
+		email: "ashishsingh4857@gmail.com",
+	};
 
 	const go = (id) => {
 		const scroll = (target) => {
@@ -111,7 +117,11 @@ export default function Footer() {
 							<ul className="space-y-2 text-black/70 dark:text-gray-300">
 								<li>
 									<a
-										href="https://github.com"
+										href={
+											contact
+												.socials
+												.github
+										}
 										target="_blank"
 										rel="noreferrer"
 										className="hover:text-yellow-600 dark:hover:text-yellow-400 transition">
@@ -120,7 +130,11 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="https://linkedin.com"
+										href={
+											contact
+												.socials
+												.linkedin
+										}
 										target="_blank"
 										rel="noreferrer"
 										className="hover:text-yellow-600 dark:hover:text-yellow-400 transition">
@@ -129,7 +143,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="mailto:you@email.com"
+										href={`mailto:${contact.email}`}
 										className="hover:text-yellow-600 dark:hover:text-yellow-400 transition">
 										Email ↗
 									</a>
