@@ -1,4 +1,5 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import Logo from "./Logo";
 import { useTheme } from "../Context/ThemeContext";
 import { FiSun, FiMoon } from "react-icons/fi";
 
@@ -34,21 +35,7 @@ export default function Navbar() {
 				<div className="absolute inset-[1px] rounded-full bg-gradient-to-b from-yellow-600/10 dark:from-yellow-100/10 to-transparent pointer-events-none"></div>
 
 				{/* LEFT - Logo */}
-				<Link
-					to="/"
-					className="relative z-10 flex items-center gap-2">
-					<span className="text-yellow-600 dark:text-yellow-300 text-[22px] font-mono font-bold tracking-tight">
-						&lt;/&gt;
-					</span>
-					<div className="leading-[12px]">
-						<p className="text-[10px] tracking-[0.2em] text-yellow-600 dark:text-yellow-300 font-bold">
-							DEV
-						</p>
-						<p className="text-[10px] tracking-[0.2em] text-black/60 dark:text-white/70">
-							PORTFOLIO
-						</p>
-					</div>
-				</Link>
+				<Logo size="sm" />
 
 				{/* CENTER - Links */}
 				<div className="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/5 dark:bg-black/50 border border-black/10 dark:border-white/[0.06] backdrop-blur transition-colors">
