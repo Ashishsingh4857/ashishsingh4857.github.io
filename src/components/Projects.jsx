@@ -26,6 +26,7 @@ export default function Project() {
 	}
 
 	const projects = data.projects;
+	console.log(projects);
 
 	const next = () => setIndex((p) => (p + 1) % projects.length);
 	const prev = () =>
@@ -60,7 +61,7 @@ export default function Project() {
 						{getCards().map((p) => (
 							<div
 								key={p.id}
-								className="group relative rounded-[20px] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/[0.06] backdrop-blur-xl p-3 pb-5 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-none transition-colors">
+								className="group relative rounded-[20px] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/[0.06] backdrop-blur-xl p-3 pb-5 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-none transition-colors flex flex-col h-full">
 								<div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-[#FDE68A] text-black text-[11px] font-bold shadow-sm">
 									{p.tag}
 								</div>
@@ -91,15 +92,34 @@ export default function Project() {
 										</span>
 									))}
 								</div>
-								<button
-									onClick={() =>
-										navigate(
-											`/project/${p.id}`,
-										)
-									}
-									className="mt-5 mx-2 w-[calc(100%-16px)] py-2.5 rounded-xl bg-gradient-to-b from-[#FDE68A] to-[#D4A017] text-black text-sm font-bold hover:brightness-105 transition shadow-[0_4px_16px_rgba(212,160,23,0.3)]">
-									More Details →
-								</button>
+
+								<div className="mt-auto pt-5 px-2 flex gap-3">
+									<button
+										onClick={() =>
+											navigate(
+												`/project/${p.id}`,
+											)
+										}
+										className="flex-1 py-2.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.04] dark:bg-white/[0.06] text-black dark:text-white text-sm font-semibold hover:bg-black/[0.08] dark:hover:bg-white/[0.12] transition">
+										More Details →
+									</button>
+									{p.liveDemoLink && (
+										<a
+											href={
+												p.liveDemoLink
+											}
+											target="_blank"
+											rel="noopener noreferrer"
+											onClick={(
+												e,
+											) =>
+												e.stopPropagation()
+											}
+											className="flex-1 py-2.5 rounded-xl bg-gradient-to-b from-[#FDE68A] to-[#D4A017] text-black text-sm font-bold hover:brightness-105 transition shadow-[0_4px_16px_rgba(212,160,23,0.3)] flex items-center justify-center">
+											Live ↗
+										</a>
+									)}
+								</div>
 							</div>
 						))}
 					</div>

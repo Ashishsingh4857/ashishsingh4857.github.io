@@ -52,6 +52,26 @@ export default function ProjectDetails() {
 					</span>
 				))}
 			</div>
+			<div className="mt-8 flex flex-wrap gap-4">
+				{project.liveDemoLink && (
+					<a
+						href={project.liveDemoLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="px-8 py-3 rounded-xl bg-gradient-to-b from-[#FDE68A] to-[#D4A017] text-black text-sm font-bold hover:brightness-105 transition shadow-[0_4px_16px_rgba(212,160,23,0.3)]">
+						Live Demo ↗
+					</a>
+				)}
+				{project.githubLink && (
+					<a
+						href={project.githubLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="px-8 py-3 rounded-xl border border-white/20 bg-white/[0.06] text-white text-sm font-semibold hover:bg-white/[0.12] transition backdrop-blur-xl">
+						View Code ↗
+					</a>
+				)}
+			</div>
 		</div>
 	);
 }
