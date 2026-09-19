@@ -103,7 +103,7 @@
 				"Cloudinary Upload"
 			],
 			"githubLink": "https://github.com/Ashishsingh4857/youtube-twitter-backend",
-			"liveDemoLink": "https://github.com/Ashishsingh4857/youtube-twitter-frontend"
+			"liveDemoLink": "https://github.com/Ashishsingh4857/youtube-twitter-frontend.io"
 		},
 		{
 			"id": 2,
@@ -126,7 +126,7 @@
 				"Authentication"
 			],
 			"githubLink": "https://github.com/Ashishsingh4857/Realtime-pizza-tracking-app",
-			"liveDemoLink": "https://pizza.run.place/"
+			"liveDemoLink": "#"
 		},
 		{
 			"id": 3,
@@ -142,7 +142,7 @@
 				"SEO Optimized",
 				"Fully Responsive"
 			],
-			"githubLink": "https://github.com/Ashishsingh4857",
+			"githubLink": "https://github.com/Ashishsingh4857/ashishsingh4857.github.io",
 			"liveDemoLink": "#"
 		},
 		{
@@ -181,8 +181,8 @@
 				"Dynamic UI",
 				"Responsive Design"
 			],
-			"githubLink": "https://github.com/Ashishsingh4857",
-			"liveDemoLink": "#"
+			"githubLink": "https://github.com/Ashishsingh4857/weather-application",
+			"liveDemoLink": "https://getweatherby-ashish4857.netlify.app/"
 		},
 		{
 			"id": 6,
@@ -198,8 +198,8 @@
 				"One-Click Copy",
 				"Strength Indicator"
 			],
-			"githubLink": "https://github.com/Ashishsingh4857",
-			"liveDemoLink": "#"
+			"githubLink": "https://github.com/Ashishsingh4857/Random-password-generator",
+			"liveDemoLink": "https://generatepasswordsby-ashish4857.netlify.app/"
 		},
 		{
 			"id": 7,
@@ -215,8 +215,8 @@
 				"Multiple Color Stops",
 				"Random Generator"
 			],
-			"githubLink": "https://github.com/Ashishsingh4857",
-			"liveDemoLink": "#"
+			"githubLink": "https://github.com/Ashishsingh4857/React-tutorial-projects-/tree/main/03-bg-changer",
+			"liveDemoLink": "https://generategradientsby-ashish.netlify.app/"
 		}
 	],
 	"contact": {
